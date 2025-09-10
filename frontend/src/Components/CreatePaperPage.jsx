@@ -81,7 +81,7 @@ useEffect(() => {
   const createZipFile = async () => {
     const zip = new JSZip();
 
-    for (const paper of pData) {
+    for (const paper of pData.flat()) {
       const { examData, data, selectedQuestions, instructions, setNo } = paper;
 
 
