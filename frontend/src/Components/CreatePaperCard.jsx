@@ -284,7 +284,7 @@ const CreatePaperCard = ({ mcqs, subjective, examData, data , setPaperData, show
             </tr>
             <tr>
               <td className="border px-2 py-1 text-center" style={styles.schoolInfoKey}>Max Marks</td>
-              <td className="border px-2 py-1 text-center font-semibold" style={styles.schoolInfoValue}>60</td>
+              <td className="border px-2 py-1 text-center font-semibold" style={styles.schoolInfoValue}>{Object.entries(examData.sections).reduce((sum, [key, sec]) => sum + key * sec.reqQuestions,0)}</td>
               <td className="border px-2 py-1 text-center" style={styles.schoolInfoKey}>Duration</td>
               <td className="border px-2 py-1 text-center font-semibold" style={styles.schoolInfoValue}>
                 {examData.duration}
