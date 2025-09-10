@@ -359,7 +359,7 @@ const CreatePaperCard = ({ mcqs, subjective, examData, data , setPaperData, show
       
       {
         show && <button
-        onClick={() => generateExamDocx(examData, data, selectedQuestions, questionSelector, instructions ,setNo = {setNo})}
+        onClick={() => generateExamDocx(examData, data, selectedQuestions, instructions ,setNo = {setNo})}
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mt-4"
       >
         Print to DOCX
